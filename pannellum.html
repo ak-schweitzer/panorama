@@ -21,7 +21,9 @@
     <title>Pannellum サンプル</title>
   </head>
   <body>
-    <header></header>
+    <header>
+      <div id="menubar"></div>
+    </header>
 
     <div id="maincontents">
 
@@ -31,8 +33,7 @@
       <script>
         pannellum.viewer('panorama', {
           "type": "equirectangular",
-          "panorama": "exterior01.jpg",
-          "autoLoad": true
+          "panorama": "exterior01.jpg"
         });
       </script>
 
