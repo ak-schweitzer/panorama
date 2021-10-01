@@ -12,44 +12,42 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
     <style>
-    #panorama {
-        width: 600px;
-        max-width: 100%;
-        height: 400px;
-    }
+
+.viewer{
+  width: 600px;
+  max-width: 100%;
+  height: 400px;
+  margin-left: 3em;
+}
+
     </style>
 
-    <title>360°パノラマ画像ビューア サンプル - aki-labo dd -</title>
+    <title>360°パノラマ画像ビューア</title>
   </head>
   <body>
     <header>
-      <div id="pagetitle">aki-labo digital design</div>
-      <div id="menubar">
-        <a href="index.html"><i class="fas fa-home"></i></a>
-        <a href="profile.html"><i class="far fa-smile"></i> プロフィール</a>
-        <a style="display:none" href="atelier.html">サンプルAtelier</a>
-        <a style="display:none" href="vr.html">VR</a>
-        <a style="display:none" href="platz.html">Platz</a>
-      </div>
+      <div id="menubar"></div>
     </header>
     <div id="maincontents">
 
       <h1>360°パノラマ画像ビューア サンプル</h1>
 
       <h2>Pannellum</h2>
-      <a href="https://pannellum.org/">pannellum.org</a>
-      <div id="panorama"></div>
+      <div id="panorama" class="viewer"></div>
       <script>
-        pannellum.viewer('panorama', {
-          "type": "equirectangular",
-          "panorama": "interior01.jpg",
-          "autoLoad": true
-        });
-      </script>
-      <a href="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https://ak-schweitzer.github.io/panorama/interior01.jpg&autoLoad=true">別ページで開く</a>
 
-      <h2>A-Frame.js</h2>
-      <iframe style="width:600px;max-width:100%;height:400px;border-style:none;" src="a-frame.html" allowfullscreen></iframe>
+pannellum.viewer('panorama', {
+  "type": "equirectangular",
+  "panorama": "interior01.jpg",
+  "autoLoad": true
+});
+
+      </script>
+      <a href="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https://ak-schweitzer.github.io/panorama/interior01.jpg&autoLoad=true" target="_blank">別ページで開く</a>
+
+      <h2>A-Frame</h2>
+      <iframe class="viewer" style="border-style:none;" src="a-frame.html" allowfullscreen></iframe>
+      <a href="a-frame.html" target="_blank">別ページで開く</a>
 
     </div>
     <footer>&copy;2021 aki-labo digital design</footer>
